@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>My Flask APP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <div class="text-center">
+            <div class="jumbotron">
+                <h1 class="display-4">Please take the time to fill the form !</h1>
+                <p class="lead"></p>
+                <hr class="my-4">
+                <p class="lead">
+                    <div class="form">
+                        <form action="/submit" method="POST">
+                            <input name="n_tokens_title" id=" n_tokens_title" placeholder="Number of words in the title"required>
+                            <input name="n_tokens_content" id="  n_tokens_content" placeholder="Number of words in the content"required>
+                            <input name="n_unique_tokens" id="  n_unique_tokens" placeholder="Rate of unique words in the content"required>
+                            <input name="n_non_stop_unique_tokens" id=" n_non_stop_unique_tokens" placeholder="Rate of unique non-stop words in the content "required>
+                            <input name="num_hrefs" id="  num_hrefs" placeholder="Number of links"required>
+                            <input name="num_self_hrefs" id="        num_self_hrefs" placeholder="Number of links to other articles published by Mashable"required>
+                            <input name="num_imgs" id="  num_imgs" placeholder="Number of images"required>
+                            <input name="num_videos" id="  num_videos" placeholder="Number of videos"required>
+                            <input name="average_token_length" id="  average_token_length" placeholder="Average length of the words in the content "required>
+                            <input name="num_keywords" id="  num_keywords" placeholder="Number of keywords in the metadata"required>
+
+
+                            <input name="kw_min_min" id="   kw_min_min" placeholder="Worst keyword (min. shares)"required>
+                            <input name="kw_max_min" id="   kw_max_min" placeholder="Worst keyword (max. shares)"required>
+                            <input name="kw_avg_min" id="   kw_avg_min" placeholder="Worst keyword (avg. shares)"required>
+                            <input name="kw_min_max" id="   kw_min_max" placeholder="Best keyword (min. shares)"required>
+                            <input name="kw_max_max" id="   kw_max_max" placeholder="Best keyword (max. shares)"required>
+                            <input name="kw_avg_max" id="   kw_avg_max" placeholder="Best keyword (avg. shares)"required>
+                            <input name="kw_min_avg" id="   kw_min_avg" placeholder="Avg. keyword (min. shares)"required>
+                            <input name="kw_max_avg" id="   kw_max_avg" placeholder="Avg. keyword (max. shares)"required>
+                            <input name="kw_avg_avg" id="   kw_avg_avg" placeholder="Avg. keyword (avg. shares)"required>
+
+
+                            <input name="self_reference_min_shares" id="  self_reference_min_shares" placeholder="Min. shares of referenced articles in Mashable"required>
+                            <input name="self_reference_max_shares" id="   self_reference_max_shares" placeholder="Max. shares of referenced articles in Mashable"required>
+                            <input name="self_reference_avg_sharess" id="  self_reference_avg_sharess" placeholder="Avg. shares of referenced articles in Mashable"required>
+
+                            <input name="LDA_00" id=" LDA_00" placeholder="Closeness to LDA topic 0"required>
+                            <input name="LDA_01" id="   LDA_01" placeholder="Closeness to LDA topic 1"required>
+                            <input name="LDA_02" id="   LDA_02" placeholder="Closeness to LDA topic 2"required>
+                            <input name="LDA_03" id="   LDA_03" placeholder="Closeness to LDA topic 3"required>
+                            <input name="LDA_04" id="   LDA_04" placeholder="Closeness to LDA topic 4"required>
+                            <input name="global_subjectivity" id="   global_subjectivity" placeholder="Text subjectivity"required>
+                            <input name="global_sentiment_polarity" id="   global_sentiment_polarity" placeholder="Text sentiment polarity"required>
+                            <input name="global_rate_positive_words" id="   global_rate_positive_words" placeholder="Rate of positive words in the content"required>
+                            <input name="global_rate_negative_words" id="   global_rate_negative_words" placeholder="Rate of negative words in the content"required>
+                            <input name="rate_positive_words" id="   rate_positive_words" placeholder="Rate of positive words among non-neutral tokens"required>
+                            <input name="rate_negative_words" id="   rate_negative_words" placeholder="Rate of negative words among non-neutral tokens "required>
+                            <input name="avg_positive_polarity" id="   avg_positive_polarity" placeholder="Avg. polarity of positive words"required>
+                            <input name="min_positive_polarity" id="  min_positive_polarity" placeholder="Min. polarity of positive words"required>
+                            <input name="max_positive_polarity" id="   max_positive_polarity" placeholder="Max. polarity of positive words"required>
+                            <input name="avg_negative_polarity" id="   avg_negative_polarity" placeholder="Avg. polarity of negative words"required>
+                            <input name="min_negative_polarity" id="   min_negative_polarity" placeholder="Min. polarity of negative words"required>
+                            <input name="max_negative_polarity" id="   max_negative_polarity" placeholder="Max. polarity of negative words"required>
+                            <input name="title_subjectivity" id="  title_subjectivity" placeholder="Title subjectivity"required>
+                            <input name="title_sentiment_polarity" id="   title_sentiment_polarity" placeholder="Title polarity"required>
+                            <input name="abs_title_subjectivity" id="   abs_title_subjectivity" placeholder="Absolute subjectivity level"required>
+                            <input name="abs_title_sentiment_polarity" id="   abs_title_sentiment_polarity" placeholder="Absolute polarity level"required>
+
+                            <input type="checkbox" value =1 name="data_channel" id="Entertainment" placeholder="   Entertainment ">
+                            <label for="Entertainment">Entertainment</label>
+                            <input type="checkbox" value =1 name="data_channel" id="Social Media" placeholder="  Social Media">
+                            <label for="Social Media">Social Media</label>
+                            <input type="checkbox" value =1 name="data_channel" id="Tech" placeholder="   Tech">
+                            <label for="Tech">Tech</label>
+                            <input type="checkbox" value = 1 name="data_channel" id="World" placeholder="   World">
+                            <label for="World">World</label>
+
+                            <input type="checkbox" value = 1 name="weekday" id="Monday " placeholder="    Monday ">
+                            <label for="Monday">Monday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Tuesday " placeholder="    Tuesday ">
+                            <label for="Tuesday">Tuesday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Wednesday " placeholder="    Wednesday ">
+                            <label for="Wednesday">Wednesday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Thursday " placeholder="    Thursday ">
+                            <label for="Thursday">Thursday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Friday" placeholder="    Friday">
+                            <label for="Friday">Friday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Saturday" placeholder="    Saturday">
+                            <label for="Saturday">Saturday</label>
+                            <input type="checkbox" value = 1 name="weekday" id="Sunday" placeholder="    Sunday">
+                            <label for="Sunday">Sunday</label>
+
+
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-info">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
